@@ -1,0 +1,16 @@
+# 빌드 산출물은 컨테이너 안에서 colcon build 로 재생성됨
+build/
+install/
+log/
+
+# Git / docker 메타
+.git/
+.gitignore
+docker-compose.yml
+.dockerignore
+README.md
+LICENSE
+
+# Python 캐시
+**/__pycache__/
+**/*.pyc

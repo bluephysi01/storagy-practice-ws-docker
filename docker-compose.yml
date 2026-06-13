@@ -1,0 +1,20 @@
+services:
+  storagy-practice:
+    # Docker Hub 에 올라간 사전 빌드 이미지. `docker compose up` 시 이미지가 있으면
+    # 받아서 바로 실행하고, 없으면 `docker compose build` 로 로컬 빌드한다.
+    image: bluephysi01/storayg_practice_ws:latest
+    build: .
+    container_name: storayg-practice
+    environment:
+      - LIBGL_ALWAYS_SOFTWARE=1   # 소프트웨어 렌더링 (GPU 불필요)
+    ports:
+      - "6080:80"     # noVNC 데스크탑 -> 브라우저에서 http://localhost:6080
+    volumes:
+      # 호스트의 ./src 를 컨테이너에 마운트 -> 호스트에서 코드 수정 시 즉시 반영.
+      #  - 런치/월드/맵/URDF/설정 등을 고친 뒤에는 컨테이너 안에서 재빌드 필요:
+      #      docker compose exec storagy-practice rebuild_ws.sh
+      - ./src:/opt/storayg_practice_ws/src
+    shm_size: "1gb"   # Gazebo/RViz 는 기본 64MB 보다 큰 공유메모리가 필요
+    security_opt:
+      - seccomp:unconfined
+    restart: unless-stopped
