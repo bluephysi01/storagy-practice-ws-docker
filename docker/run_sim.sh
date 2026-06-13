@@ -14,7 +14,7 @@ for _ in $(seq 1 60); do
 done
 
 source /opt/ros/humble/setup.bash
-source /opt/storayg_practice_ws/install/setup.bash
+source /opt/storagy-practice-ws-docker/install/setup.bash
 
-cd /opt/storayg_practice_ws
+cd /opt/storagy-practice-ws-docker
 exec ros2 launch storagy sim.launch.py "$@"

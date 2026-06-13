@@ -1,10 +1,10 @@
 #!/bin/bash
 # 데스크탑 로그인 시 자동으로 뜨는 안내 터미널. 실습 순서를 출력하고 환경을 source 한다.
 source /opt/ros/humble/setup.bash
-source /opt/storayg_practice_ws/install/setup.bash 2>/dev/null
+source /opt/storagy-practice-ws-docker/install/setup.bash 2>/dev/null
 export DISPLAY=:1
 export LIBGL_ALWAYS_SOFTWARE=1
-cd /opt/storayg_practice_ws
+cd /opt/storagy-practice-ws-docker
 
 cat <<'EOF'
 ============================================================

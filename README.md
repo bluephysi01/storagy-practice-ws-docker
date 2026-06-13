@@ -26,8 +26,8 @@ Docker Engine + compose 플러그인(Ubuntu)을 설치합니다. 메모리는 **
 ## 빠른 시작
 
 ```bash
-git clone https://github.com/bluephysi01/storayg_practice_ws.git
-cd storayg_practice_ws
+git clone https://github.com/bluephysi01/storagy-practice-ws-docker.git
+cd storagy-practice-ws-docker
 
 # Docker Hub 이미지를 받아서 실행 (이미지가 없으면 docker compose build 로 로컬 빌드)
 docker compose up -d
@@ -112,7 +112,7 @@ RViz 가 뜨면:
 
 ## 코드 수정하기
 
-호스트의 `./src` 폴더가 컨테이너 안 `/opt/storayg_practice_ws/src` 에 마운트되어 있어,
+호스트의 `./src` 폴더가 컨테이너 안 `/opt/storagy-practice-ws-docker/src` 에 마운트되어 있어,
 **호스트에서 파일을 수정하면 컨테이너에 반영**됩니다.
 
 - 런치 파일 / 월드 / 맵 / URDF / Cartographer·Nav2 설정 등을 수정한 뒤에는 컨테이너 안에서
@@ -133,7 +133,7 @@ docker compose build
 
 # Docker Hub 로그인 후 푸시
 docker login
-docker compose push   # bluephysi01/storayg_practice_ws:latest
+docker compose push   # bluephysi01/storagy-practice-ws-docker:latest
 ```
 
 Docker Hub 저장소가 **Public** 이어야 다른 사람이 로그인 없이 `docker compose up` 만으로

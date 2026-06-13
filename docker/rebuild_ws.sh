@@ -8,7 +8,7 @@
 set -e
 
 source /opt/ros/humble/setup.bash
-cd /opt/storayg_practice_ws
+cd /opt/storagy-practice-ws-docker
 colcon build --symlink-install --packages-select storagy
 
 echo

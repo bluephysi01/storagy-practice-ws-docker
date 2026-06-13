@@ -36,7 +36,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # 2. ROS 2 워크스페이스 빌드
 #    Cartographer/Nav2 등은 위 apt 바이너리를 쓰고, 여기서는 storagy 패키지만 빌드.
 # ---------------------------------------------------------------------------
-ENV WS=/opt/storayg_practice_ws
+ENV WS=/opt/storagy-practice-ws-docker
 WORKDIR ${WS}
 COPY . ${WS}
 

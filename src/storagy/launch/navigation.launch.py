@@ -6,7 +6,7 @@
 #
 #   사용 예:
 #     ros2 launch storagy navigation.launch.py \
-#         map:=$HOME/storayg_practice_ws/src/storagy/map/warehouse.yaml
+#         map:=$HOME/storagy-practice-ws-docker/src/storagy/map/warehouse.yaml
 
 import os
 
